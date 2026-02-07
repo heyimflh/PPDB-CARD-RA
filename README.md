@@ -1,12 +1,12 @@
-PPDB Card – RA Ittihadul Muslimat
-Deskripsi Proyek
+🎓 PPDB Card – RA Ittihadul Muslimat
+📌 Deskripsi Proyek
 
-PPDB Card RA Ittihadul Muslimat adalah halaman web single-page application berbasis static HTML yang dirancang sebagai media resmi Penerimaan Peserta Didik Baru (PPDB).
-Aplikasi ini mengusung konsep kartu informasi digital (digital PPDB card) dengan pendekatan mobile-first, sehingga optimal diakses melalui perangkat smartphone.
+PPDB Card RA Ittihadul Muslimat merupakan halaman web single-page berbasis static HTML yang dikembangkan sebagai media resmi Penerimaan Peserta Didik Baru (PPDB).
 
-Website ini bertujuan untuk menyajikan informasi sekolah secara terstruktur, informatif, dan profesional, sekaligus menyediakan jalur komunikasi dan pendaftaran yang cepat bagi calon wali murid.
+Website ini mengusung konsep kartu informasi digital (Digital PPDB Card) dengan pendekatan mobile-first, sehingga optimal diakses melalui perangkat smartphone.
+Tujuannya adalah menyajikan informasi sekolah secara terstruktur, informatif, dan profesional, sekaligus menyediakan jalur komunikasi serta pendaftaran yang cepat dan mudah bagi calon wali murid.
 
-Tujuan Pengembangan
+🎯 Tujuan Pengembangan
 
 Menyediakan media digital PPDB yang mudah diakses dan dipahami
 
@@ -16,15 +16,16 @@ Mendukung transformasi digital lembaga pendidikan RA
 
 Mempermudah proses komunikasi dan pendaftaran calon peserta didik
 
-Fitur Utama
+✨ Fitur Utama
+📱 Mobile-First & Responsive Layout
 
-Mobile-First & Responsive Layout
 Dirancang khusus untuk kenyamanan pengguna mobile tanpa mengabaikan tampilan desktop.
 
-Tampilan Islami & Profesional
-Menggunakan palet warna madrasah, tipografi edukatif, dan ikon pendukung yang konsisten.
+🎨 Tampilan Islami & Profesional
 
-Informasi Sekolah Terstruktur
+Menggunakan palet warna madrasah, tipografi edukatif, serta ikon pendukung yang konsisten.
+
+🏫 Informasi Sekolah Terstruktur
 
 Muqaddimah lembaga
 
@@ -34,7 +35,7 @@ Kurikulum Merdeka dan muatan lokal
 
 Fasilitas unggulan sekolah
 
-Informasi PPDB
+📝 Informasi PPDB
 
 Waktu dan jam pelayanan
 
@@ -42,19 +43,19 @@ Syarat pendaftaran
 
 Alur informasi yang jelas dan mudah dibaca
 
-Informasi Pembayaran
+💳 Informasi Pembayaran
 
-Daftar rekening sekolah ditampilkan dalam format kartu bank yang rapi
+Daftar rekening sekolah ditampilkan dalam format kartu bank digital yang rapi dan mudah dipahami
 
-Call-To-Action Terintegrasi
+🚀 Call-To-Action Terintegrasi
 
-Tombol telepon langsung
+Tombol Telepon langsung
 
 WhatsApp auto message
 
 Pendaftaran online (Google Form)
 
-Interaksi Ringan & Efisien
+⚡ Interaksi Ringan & Efisien
 
 Animasi halus
 
@@ -62,25 +63,25 @@ Transisi tab berbasis JavaScript
 
 Tanpa penggunaan framework berat
 
-Teknologi yang Digunakan
+🛠️ Teknologi yang Digunakan
 
-HTML5 – Struktur halaman
+HTML5 — Struktur halaman
 
-CSS3 – Styling, layout, dan animasi
+CSS3 — Styling, layout, dan animasi
 
-JavaScript (Vanilla) – Interaksi tab dan navigasi
+JavaScript (Vanilla) — Interaksi tab dan navigasi
 
-Font Awesome – Ikon UI
+Font Awesome — Ikon antarmuka
 
-Google Fonts – Tipografi (Poppins & Nunito)
+Google Fonts — Tipografi (Poppins & Nunito)
 
-Struktur File
+📂 Struktur File
 /
 ├── index.html
 ├── logo-ra.png
 └── README.md
 
-Kesesuaian Penggunaan
+✅ Kesesuaian Penggunaan
 
 Proyek ini cocok digunakan untuk:
 
@@ -90,9 +91,9 @@ Media PPDB tahunan
 
 Landing page informasi sekolah
 
-Link bio WhatsApp / QR Code brosur digital
+Link bio WhatsApp & QR Code brosur digital
 
-Kustomisasi
+🔧 Kustomisasi
 
 Beberapa bagian yang dapat disesuaikan:
 
@@ -106,7 +107,7 @@ Link pendaftaran online
 
 Skema warna dan identitas visual
 
-Lisensi
+📄 Lisensi
 
 Proyek ini dikembangkan untuk kebutuhan institusional RA Ittihadul Muslimat.
 Penggunaan ulang, modifikasi, dan distribusi menyesuaikan kebijakan pemilik proyek.
