@@ -3,98 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PPDB RA Ittihadul Muslimat – Menyiapkan Generasi Qur'ani, Cerdas & Berakhlakul Karimah">
+    <meta name="theme-color" content="#008751">
     <title>PPDB RA Ittihadul Muslimat | Generasi Qur'ani</title>
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <style>
         :root {
-            --primary: #008751; /* Hijau Madrasah */
+            --primary: #008751;
             --primary-dark: #005c36;
-            --accent: #FFD700; /* Kuning Emas */
+            --accent: #FFD700;
             --bg-color: #F0F4F3;
             --text-dark: #2D3436;
             --text-light: #636E72;
             --white: #ffffff;
-            --shadow-soft: 0 10px 30px rgba(0,0,0,0.05);
-            --shadow-card: 0 4px 15px rgba(0, 135, 81, 0.1);
+            --shadow-soft: 0 10px 30px rgba(0,0,0,0.06);
+            --shadow-card: 0 6px 20px rgba(0, 135, 81, 0.12);
+            --radius-lg: 22px;
+            --radius-md: 15px;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html { scroll-behavior: smooth; }
+
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #dfe6e9;
+            background: linear-gradient(180deg, #dfe6e9, #f5f6fa);
             color: var(--text-dark);
             display: flex;
             justify-content: center;
             min-height: 100vh;
         }
 
-        /* Mobile Container Wrapper */
         .app-wrapper {
             width: 100%;
             max-width: 480px;
             background-color: var(--bg-color);
             min-height: 100vh;
             position: relative;
-            box-shadow: 0 0 50px rgba(0,0,0,0.1);
+            box-shadow: 0 0 60px rgba(0,0,0,0.15);
             overflow-x: hidden;
-            padding-bottom: 100px; /* Space for bottom nav */
+            padding-bottom: 110px;
         }
 
-        /* --- HEADER SECTION --- */
+        /* ================= HEADER ================= */
         .header-hero {
             background: linear-gradient(160deg, var(--primary) 0%, var(--primary-dark) 100%);
             color: white;
-            padding: 30px 20px 50px;
-            border-bottom-left-radius: 35px;
-            border-bottom-right-radius: 35px;
+            padding: 35px 20px 55px;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
             text-align: center;
             position: relative;
+            overflow: hidden;
         }
 
         .header-hero::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
-            opacity: 0.3;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.06'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
         }
 
         .logo-area {
-            width: 110px;
-            height: 110px;
+            width: 115px;
+            height: 115px;
             background: white;
             border-radius: 50%;
             margin: 0 auto 15px;
-            padding: 5px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            padding: 8px;
+            box-shadow: 0 12px 25px rgba(0,0,0,0.25);
             position: relative;
             z-index: 2;
-            animation: bounceIn 1s;
+            animation: bounceIn 0.9s ease-out;
         }
-        
+
         .logo-area img { width: 100%; height: 100%; object-fit: contain; }
 
-        .school-name { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 1.4rem; letter-spacing: 0.5px; }
-        .tagline { font-size: 0.85rem; opacity: 0.9; margin-top: 5px; font-style: italic; }
-        
+        .school-name {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            letter-spacing: 0.6px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .tagline {
+            font-size: 0.85rem;
+            opacity: 0.95;
+            margin-top: 6px;
+            font-style: italic;
+            position: relative;
+            z-index: 2;
+        }
+
         .badge-akreditasi {
             background: var(--accent);
             color: var(--primary-dark);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: 700;
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-weight: 800;
             font-size: 0.8rem;
             display: inline-block;
-            margin-top: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            margin-top: 12px;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+            position: relative;
+            z-index: 2;
         }
 
-        /* --- FLOATING CARDS --- */
+        .salam-sapa {
+            text-align: center;
+            font-family: 'Nunito', sans-serif;
+            color: #fff;
+            font-weight: 800;
+            font-size: 0.95rem;
+            margin-top: 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* ================= CARDS ================= */
         .card-overlap {
-            margin-top: -35px;
+            margin-top: -40px;
             padding: 0 20px;
             position: relative;
             z-index: 3;
@@ -102,85 +146,111 @@
 
         .info-card {
             background: white;
-            border-radius: 20px;
-            padding: 20px;
+            border-radius: var(--radius-lg);
+            padding: 22px 20px;
             box-shadow: var(--shadow-soft);
-            margin-bottom: 20px;
-            border: 1px solid rgba(0,0,0,0.02);
+            margin-bottom: 22px;
+            border: 1px solid rgba(0,0,0,0.03);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-card);
         }
 
         .section-title {
             font-family: 'Nunito', sans-serif;
             font-weight: 800;
             color: var(--primary);
-            font-size: 1.1rem;
-            margin-bottom: 15px;
+            font-size: 1.15rem;
+            margin-bottom: 16px;
             display: flex;
             align-items: center;
             gap: 10px;
         }
-        
-        .section-title i { background: rgba(0, 135, 81, 0.1); padding: 8px; border-radius: 8px; font-size: 1rem; }
 
-        /* Muqaddimah Box */
+        .section-title i {
+            background: rgba(0, 135, 81, 0.12);
+            padding: 9px;
+            border-radius: 10px;
+            font-size: 1rem;
+        }
+
         .muqaddimah-text {
             font-size: 0.9rem;
-            line-height: 1.7;
+            line-height: 1.75;
             color: #555;
             text-align: justify;
         }
-        
+
         .highlight-year {
             background: var(--accent);
-            padding: 0 4px;
-            border-radius: 4px;
+            padding: 2px 6px;
+            border-radius: 6px;
             font-weight: bold;
         }
 
-        /* --- TABS FOR VISI MISI --- */
-        .tabs { display: flex; gap: 10px; margin-bottom: 15px; background: #f1f2f6; padding: 5px; border-radius: 12px; }
+        /* ================= TABS ================= */
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            background: #f1f2f6;
+            padding: 6px;
+            border-radius: 14px;
+        }
+
         .tab-btn {
             flex: 1;
-            padding: 10px;
+            padding: 11px;
             border: none;
             background: transparent;
-            border-radius: 8px;
+            border-radius: 10px;
             font-weight: 600;
             color: var(--text-light);
             cursor: pointer;
             transition: 0.3s;
             font-size: 0.9rem;
         }
-        .tab-btn.active { background: white; color: var(--primary); box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .tab-content { display: none; animation: fadeIn 0.4s; }
+
+        .tab-btn.active {
+            background: white;
+            color: var(--primary);
+            box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+        }
+
+        .tab-content { display: none; animation: fadeIn 0.35s ease; }
         .tab-content.active { display: block; }
 
         .list-misi li {
             list-style: none;
-            padding-left: 25px;
+            padding-left: 26px;
             position: relative;
             margin-bottom: 10px;
             font-size: 0.9rem;
             color: #444;
         }
+
         .list-misi li::before {
             content: '✨';
             position: absolute;
-            left: 0; top: 2px;
-            font-size: 0.8rem;
+            left: 0; top: 1px;
+            font-size: 0.85rem;
         }
 
-        /* --- KURIKULUM GRID --- */
+        /* ================= GRID & SCROLL ================= */
         .kurikulum-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
+            gap: 12px;
         }
+
         .k-item {
             background: #f8fffa;
             border: 1px solid #e0f2e9;
-            padding: 12px;
-            border-radius: 12px;
+            padding: 14px 10px;
+            border-radius: var(--radius-md);
             text-align: center;
             font-size: 0.85rem;
             font-weight: 600;
@@ -188,31 +258,33 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 5px;
+            gap: 6px;
         }
-        .k-item i { font-size: 1.2rem; color: var(--accent); }
 
-        /* --- FASILITAS SCROLL --- */
+        .k-item i { font-size: 1.25rem; color: var(--accent); }
+
         .fasilitas-scroll {
             display: flex;
             overflow-x: auto;
             gap: 15px;
-            padding-bottom: 10px;
+            padding-bottom: 12px;
             scrollbar-width: none;
         }
+
         .fasilitas-scroll::-webkit-scrollbar { display: none; }
-        
+
         .f-card {
-            min-width: 140px;
+            min-width: 145px;
             background: white;
-            border-radius: 15px;
-            padding: 15px;
+            border-radius: var(--radius-md);
+            padding: 16px 12px;
             text-align: center;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 14px rgba(0,0,0,0.06);
             border: 1px solid #eee;
         }
+
         .f-icon-box {
-            width: 50px; height: 50px;
+            width: 52px; height: 52px;
             background: linear-gradient(135deg, #a8e6cf 0%, #dcedc1 100%);
             border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
@@ -221,110 +293,128 @@
             font-size: 1.2rem;
         }
 
-        /* --- INFO PENDAFTARAN --- */
+        /* ================= TIMELINE ================= */
         .timeline-box {
             border-left: 3px solid var(--accent);
-            padding-left: 20px;
-            margin-left: 10px;
+            padding-left: 22px;
+            margin-left: 8px;
         }
-        .timeline-item { position: relative; margin-bottom: 20px; }
-        .timeline-item::before {
-            content: ''; position: absolute; left: -27px; top: 5px;
-            width: 12px; height: 12px; background: var(--primary);
-            border-radius: 50%; border: 2px solid white; box-shadow: 0 0 0 2px var(--accent);
-        }
-        .t-title { font-weight: 700; color: var(--primary-dark); font-size: 0.95rem; }
-        .t-desc { font-size: 0.85rem; color: #666; margin-top: 3px; }
 
-        /* --- BANK CARDS --- */
+        .timeline-item { position: relative; margin-bottom: 20px; }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -29px; top: 5px;
+            width: 13px; height: 13px;
+            background: var(--primary);
+            border-radius: 50%;
+            border: 2px solid white;
+            box-shadow: 0 0 0 2px var(--accent);
+        }
+
+        .t-title { font-weight: 700; color: var(--primary-dark); font-size: 0.95rem; }
+        .t-desc { font-size: 0.85rem; color: #666; margin-top: 4px; }
+
+        /* ================= BANK ================= */
         .bank-card {
-            background: linear-gradient(135deg, #2d3436 0%, #000000 100%);
             color: white;
-            padding: 15px;
-            border-radius: 15px;
-            margin-bottom: 10px;
+            padding: 16px;
+            border-radius: var(--radius-md);
+            margin-bottom: 12px;
             position: relative;
             overflow: hidden;
         }
+
         .bank-card.bri { background: linear-gradient(135deg, #005596 0%, #002a4b 100%); }
         .bank-card.bsi { background: linear-gradient(135deg, #00a498 0%, #005f58 100%); }
         .bank-card.dki { background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); }
-        
-        .bank-logo { font-weight: 800; font-size: 1.2rem; opacity: 0.8; margin-bottom: 15px; display: block; text-align: right;}
-        .bank-number { font-family: 'Courier New', monospace; font-size: 1.1rem; letter-spacing: 1px; margin-bottom: 5px; }
-        .bank-name { font-size: 0.75rem; opacity: 0.8; text-transform: uppercase; }
 
-        /* --- FOOTER & CONTACT --- */
-        .bottom-nav {
-            position: fixed; bottom: 0; left: 0; right: 0;
-            max-width: 480px; margin: 0 auto;
-            background: white;
-            padding: 15px 15px 25px;
-            display: flex; gap: 8px;
-            box-shadow: 0 -8px 25px rgba(0,0,0,0.1);
-            z-index: 100;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
+        .bank-logo { font-weight: 800; font-size: 1.2rem; opacity: 0.85; margin-bottom: 14px; text-align: right; }
+        .bank-number { font-family: 'Courier New', monospace; font-size: 1.05rem; letter-spacing: 1px; margin-bottom: 6px; }
+        .bank-name { font-size: 0.75rem; opacity: 0.85; text-transform: uppercase; }
+
+        /* ================= MAP ================= */
+        .maps-container {
+            width: 100%;
+            height: 190px;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 3px solid white;
+            box-shadow: var(--shadow-soft);
+            margin-top: 16px;
         }
-        
+
+        /* ================= BOTTOM NAV ================= */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            max-width: 480px;
+            margin: 0 auto;
+            background: white;
+            padding: 14px 14px 24px;
+            display: flex;
+            gap: 8px;
+            box-shadow: 0 -10px 30px rgba(0,0,0,0.15);
+            z-index: 100;
+            border-top-left-radius: 24px;
+            border-top-right-radius: 24px;
+        }
+
         .btn-action {
             flex: 1;
-            padding: 12px 5px;
-            border-radius: 12px;
+            padding: 12px 6px;
+            border-radius: 14px;
             text-decoration: none;
             text-align: center;
             font-weight: 700;
             font-size: 0.8rem;
-            display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
-            transition: transform 0.2s, background 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            transition: transform 0.2s ease, box-shadow 0.25s ease;
         }
+
+        .btn-action:hover { transform: translateY(-2px); }
 
         .btn-call { background: #f1f2f6; color: var(--text-dark); }
         .btn-wa { background: #25D366; color: white; }
-        .btn-online { 
-            background: var(--accent); 
+        .btn-online {
+            background: var(--accent);
             color: var(--primary-dark);
-            box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3);
+            box-shadow: 0 6px 16px rgba(255, 215, 0, 0.4);
             animation: pulseBtn 2s infinite;
         }
 
-        .btn-action i { font-size: 1.1rem; }
+        .btn-action i { font-size: 1.15rem; }
 
-        .salam-sapa {
-            text-align: center;
-            font-family: 'Nunito', sans-serif;
-            color: var(--primary);
-            font-weight: 800;
-            font-size: 1rem;
-            margin: 20px 0;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        /* ================= ANIMATIONS ================= */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        /* --- MAPS STYLING --- */
-        .maps-container {
-            width: 100%;
-            height: 180px;
-            border-radius: 15px;
-            overflow: hidden;
-            border: 3px solid white;
-            box-shadow: var(--shadow-soft);
-            margin-top: 15px;
+        @keyframes bounceIn {
+            0% { transform: scale(0.3); opacity: 0; }
+            60% { transform: scale(1.05); }
+            80% { transform: scale(0.95); }
+            100% { transform: scale(1); opacity: 1; }
         }
 
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes bounceIn { 0% { transform: scale(0.3); opacity: 0; } 50% { transform: scale(1.05); } 70% { transform: scale(0.9); } 100% { transform: scale(1); opacity: 1; } }
         @keyframes pulseBtn {
-            0% { transform: scale(1); box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3); }
-            50% { transform: scale(1.05); box-shadow: 0 4px 20px rgba(255, 215, 0, 0.5); }
-            100% { transform: scale(1); box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3); }
+            0% { transform: scale(1); }
+            50% { transform: scale(1.06); }
+            100% { transform: scale(1); }
         }
-
     </style>
 </head>
 <body>
 
 <div class="app-wrapper">
+
+    <!-- ===== HEADER ===== -->
     <header class="header-hero">
         <div class="logo-area">
             <img src="logo-ra.png" alt="Logo RA Ittihadul Muslimat">
@@ -332,13 +422,12 @@
         <h1 class="school-name">RA ITTIHADUL MUSLIMAT</h1>
         <div class="badge-akreditasi">TERAKREDITASI "A"</div>
         <p class="tagline">"Menyiapkan Generasi Qur'ani, Cerdas & Berakhlakul Karimah"</p>
-        <div class="salam-sapa">
-            ☀️ Salam - Senyum - Sapa ☀️
-        </div>
+        <div class="salam-sapa">☀️ Salam - Senyum - Sapa ☀️</div>
     </header>
 
+    <!-- ===== CONTENT ===== -->
     <div class="card-overlap">
-        
+
         <div class="info-card">
             <div class="section-title"><i class="fas fa-history"></i> Muqaddimah</div>
             <p class="muqaddimah-text">
@@ -388,130 +477,57 @@
 
         <div class="section-title" style="margin-left: 10px;"><i class="fas fa-building"></i> Fasilitas Unggulan</div>
         <div class="fasilitas-scroll">
-            <div class="f-card">
-                <div class="f-icon-box"><i class="fas fa-school"></i></div>
-                <div style="font-size:0.8rem; font-weight:bold;">Gedung Milik Sendiri</div>
-            </div>
-            <div class="f-card">
-                <div class="f-icon-box"><i class="fas fa-snowflake"></i></div>
-                <div style="font-size:0.8rem; font-weight:bold;">Ruang Kelas Ber-AC + CCTV</div>
-            </div>
-            <div class="f-card">
-                <div class="f-icon-box"><i class="fas fa-desktop"></i></div>
-                <div style="font-size:0.8rem; font-weight:bold;">Lab Komputer</div>
-            </div>
-            <div class="f-card">
-                <div class="f-icon-box"><i class="fas fa-shapes"></i></div>
-                <div style="font-size:0.8rem; font-weight:bold;">Sarana Bermain</div>
-            </div>
-            <div class="f-card">
-                <div class="f-icon-box"><i class="fas fa-users"></i></div>
-                <div style="font-size:0.8rem; font-weight:bold;">Aula Pertemuan</div>
-            </div>
+            <div class="f-card"><div class="f-icon-box"><i class="fas fa-school"></i></div><div style="font-size:0.8rem; font-weight:bold;">Gedung Milik Sendiri</div></div>
+            <div class="f-card"><div class="f-icon-box"><i class="fas fa-snowflake"></i></div><div style="font-size:0.8rem; font-weight:bold;">Ruang Kelas Ber-AC + CCTV</div></div>
+            <div class="f-card"><div class="f-icon-box"><i class="fas fa-desktop"></i></div><div style="font-size:0.8rem; font-weight:bold;">Lab Komputer</div></div>
+            <div class="f-card"><div class="f-icon-box"><i class="fas fa-shapes"></i></div><div style="font-size:0.8rem; font-weight:bold;">Sarana Bermain</div></div>
+            <div class="f-card"><div class="f-icon-box"><i class="fas fa-users"></i></div><div style="font-size:0.8rem; font-weight:bold;">Aula Pertemuan</div></div>
         </div>
-        <br>
 
         <div class="info-card" style="border: 2px solid var(--accent);">
             <div class="section-title"><i class="fas fa-clipboard-list"></i> Info Pendaftaran</div>
-            
             <div class="timeline-box">
-                <div class="timeline-item">
-                    <div class="t-title">📅 Waktu Pendaftaran</div>
-                    <div class="t-desc">Desember s/d Juli</div>
-                </div>
-                <div class="timeline-item">
-                    <div class="t-title">⏰ Jam Pelayanan</div>
-                    <div class="t-desc">08.00 s/d 16.00 WIB (Senin - Jum'at)</div>
-                </div>
-                <div class="timeline-item">
-                    <div class="t-title">📝 Syarat Pendaftaran</div>
-                    <div class="t-desc">
-                        1. Mengisi Formulir<br>
-                        2. Fotocopy KK & Akte Kelahiran<br>
-                        3. Membayar Biaya Administrasi
-                    </div>
-                </div>
+                <div class="timeline-item"><div class="t-title">📅 Waktu Pendaftaran</div><div class="t-desc">Desember s/d Juli</div></div>
+                <div class="timeline-item"><div class="t-title">⏰ Jam Pelayanan</div><div class="t-desc">08.00 s/d 16.00 WIB (Senin - Jum'at)</div></div>
+                <div class="timeline-item"><div class="t-title">📝 Syarat Pendaftaran</div><div class="t-desc">1. Mengisi Formulir<br>2. Fotocopy KK & Akte Kelahiran<br>3. Membayar Biaya Administrasi</div></div>
             </div>
         </div>
 
         <div class="info-card">
             <div class="section-title"><i class="fas fa-wallet"></i> Rekening Pembayaran</div>
-            
-            <div class="bank-card bri">
-                <span class="bank-logo">BRI</span>
-                <div class="bank-number">1235 01 02 892550 9</div>
-                <div class="bank-name">a.n RA Ittihadul Muslimat</div>
-            </div>
-
-            <div class="bank-card bsi">
-                <span class="bank-logo">BSI</span>
-                <div class="bank-number">4529 1985 80</div>
-                <div class="bank-name">a.n RA Ittihadul Muslimat</div>
-            </div>
-
-            <div class="bank-card dki">
-                <span class="bank-logo">BANK DKI</span>
-                <div class="bank-number">1092 320 1207</div>
-                <div class="bank-name">a.n YYS Ittihadul Muslimat</div>
-            </div>
+            <div class="bank-card bri"><div class="bank-logo">BRI</div><div class="bank-number">1235 01 02 892550 9</div><div class="bank-name">a.n RA Ittihadul Muslimat</div></div>
+            <div class="bank-card bsi"><div class="bank-logo">BSI</div><div class="bank-number">4529 1985 80</div><div class="bank-name">a.n RA Ittihadul Muslimat</div></div>
+            <div class="bank-card dki"><div class="bank-logo">BANK DKI</div><div class="bank-number">1092 320 1207</div><div class="bank-name">a.n YYS Ittihadul Muslimat</div></div>
         </div>
 
-        <div style="text-align: center; margin-bottom: 20px; font-size: 0.85rem; color: #666; padding: 0 10px;">
-            <p><strong>📍 Alamat Sekolah:</strong><br>
-            Jl. Warakas V Gg 6 No 79 RT 08/09<br>
-            Warakas, Tj. Priok, Jakarta Utara</p>
-
-            <div class="maps-container">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.0571246134186!2d106.87684937474965!3d-6.123014493863667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a1fc528acb237%3A0x63d868796d26008!2sYAYASAN%20ITTIHADUL%20MUSLIMAT!5e0!3m2!1sid!2sid!4v1770473459004!5m2!1sid!2sid" 
-                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-
-            <br>
-            <div style="display: flex; justify-content: center; gap: 15px; font-size: 1.5rem; margin-top: 10px;">
-                <a href="https://www.instagram.com/ittihadulmuslimat/" target="_blank" style="color: #E1306C;"><i class="fab fa-instagram"></i></a>
-                <a href="https://web.facebook.com/people/ittihadulmuslimat/100072160462998/#" target="_blank" style="color: #1877F2;"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.youtube.com/@ittihadulmuslimat1053" target="_blank" style="color: #FF0000;"><i class="fab fa-youtube"></i></a>
-            </div>
+        <div style="text-align:center; margin-bottom:20px; font-size:0.85rem; color:#666; padding:0 10px;">
+            <p><strong>📍 Alamat Sekolah:</strong><br>Jl. Warakas V Gg 6 No 79 RT 08/09<br>Warakas, Tj. Priok, Jakarta Utara</p>
+            <div class="maps-container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.0571246134186!2d106.87684937474965!3d-6.123014493863667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a1fc528acb237%3A0x63d868796d26008!2sYAYASAN%20ITTIHADUL%20MUSLIMAT!5e0!3m2!1sid!2sid!4v1770473459004!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy"></iframe></div>
         </div>
 
-    </div> 
-    
-    <div class="bottom-nav">
-        <a href="tel:0214308648" class="btn-action btn-call">
-            <i class="fas fa-phone-alt"></i>
-            <span>Telepon</span>
-        </a>
-        
-        <a href="ISI_LINK_GFORM_ANDA_DISINI" target="_blank" class="btn-action btn-online">
-            <i class="fas fa-file-signature"></i>
-            <span>Daftar Online</span>
-        </a>
-
-        <a href="https://wa.me/6289637007638?text=Assalamualaikum,%20saya%20ingin%20mendaftar%20di%20RA%20Ittihadul%20Muslimat" class="btn-action btn-wa">
-            <i class="fab fa-whatsapp"></i>
-            <span>WhatsApp</span>
-        </a>
     </div>
 
+    <div class="bottom-nav">
+        <a href="tel:0214308648" class="btn-action btn-call"><i class="fas fa-phone-alt"></i><span>Telepon</span></a>
+        <a href="ISI_LINK_GFORM_ANDA_DISINI" target="_blank" class="btn-action btn-online"><i class="fas fa-file-signature"></i><span>Daftar Online</span></a>
+        <a href="https://wa.me/6289637007638?text=Assalamualaikum,%20saya%20ingin%20mendaftar%20di%20RA%20Ittihadul%20Muslimat" class="btn-action btn-wa"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a>
+    </div>
 </div>
 
 <script>
     function openTab(evt, tabName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tab-content");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
+        const tabcontent = document.getElementsByClassName("tab-content");
+        const tablinks = document.getElementsByClassName("tab-btn");
+
+        for (let i = 0; i < tabcontent.length; i++) {
             tabcontent[i].classList.remove("active");
         }
-        tablinks = document.getElementsByClassName("tab-btn");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        for (let i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active");
         }
-        document.getElementById(tabName).style.display = "block";
+
         document.getElementById(tabName).classList.add("active");
-        evt.currentTarget.className += " active";
+        evt.currentTarget.classList.add("active");
     }
 </script>
 
